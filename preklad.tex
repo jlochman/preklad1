@@ -1,0 +1,88 @@
+\documentclass[a4paper,11pt]{book}
+\usepackage{hyphsubst}
+\HyphSubstLet{english}{usenglishmax}
+\usepackage[czech,english]{babel}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} 
+\usepackage{lmodern} 
+\usepackage[bookmarksdepth=2]{hyperref}
+
+\usepackage{paracol}
+\setlength{\columnsep}{1cm}
+\usepackage{microtype}
+
+\usepackage[a4paper,bindingoffset=0.2cm,%
+  left=1.5cm,right=1.5cm,top=2cm,bottom=2cm,%
+footskip=.5cm]{geometry}
+
+\DeclareUnicodeCharacter{00A0}{ }
+
+\newcommand{\mail}{\href{mailto:jan.lochman@icloud.com}{jan.lochman@icloud.com}}
+
+\title{Preklad LOM dokumentace}
+\author{Jan Lochman, \mail}
+\date{\today}
+
+\newcommand{\twoColls}[2] {
+  \begin{paracol}{2} 
+    \begin{leftcolumn}
+      #1
+      \vspace*{5 mm}
+    \end{leftcolumn}
+    \begin{rightcolumn}
+      #2
+      \vspace*{5 mm}
+    \end{rightcolumn}
+  \end{paracol}
+}
+
+\newcommand{\twoRows}[2] {
+  #1
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  #2
+  \vspace*{5 mm}
+}
+
+\newcommand{\gc}{~$^{\circ}C$}
+
+\begin{document}
+
+\pagestyle{empty}
+%\maketitle
+\tableofcontents
+\clearpage
+
+\pagestyle{plain}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\setcounter{chapter}{1}
+\setcounter{section}{0}
+\input{09_01.tex}
+
+\setcounter{chapter}{2}
+\setcounter{section}{0}
+\input{09_02.tex}
+
+\setcounter{chapter}{3}
+\setcounter{section}{0}
+\input{09_03.tex}
+
+\setcounter{chapter}{4}
+\setcounter{section}{0}
+\input{09_04.tex}
+
+\setcounter{chapter}{5}
+\setcounter{section}{0}
+\input{09_05.tex}
+
+\setcounter{chapter}{6}
+\setcounter{section}{0}
+\input{09_06.tex}
+
+\setcounter{chapter}{7}
+\setcounter{section}{0}
+\input{09_07.tex}
+
+\end{document}
