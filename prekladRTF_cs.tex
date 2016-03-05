@@ -1,22 +1,13 @@
-\documentclass[a4paper,12pt,oneside]{book}
-\usepackage{hyphsubst}
-\HyphSubstLet{english}{usenglishmax}
+\documentclass[a4paper,12pt]{book}
 \usepackage[czech,english]{babel}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc} 
-\usepackage{lmodern} 
 \usepackage[bookmarksdepth=2]{hyperref}
-
-\usepackage{paracol}
-\setlength{\columnsep}{1cm}
-\usepackage{microtype}
 
 \usepackage[a4paper,bindingoffset=0.2cm,%
   left=1.5cm,right=1.5cm,top=2cm,bottom=2cm,%
 footskip=.5cm]{geometry}
-
-\DeclareUnicodeCharacter{00A0}{ }
 
 \newcommand{\mail}{\href{mailto:jan.lochman@icloud.com}{jan.lochman@icloud.com}}
 
@@ -25,33 +16,17 @@ footskip=.5cm]{geometry}
 \date{\today}
 
 \newcommand{\twoColls}[2] {
-  \begin{paracol}{2} 
-    \begin{leftcolumn}
-      #1
-      \vspace*{5 mm}
-    \end{leftcolumn}
-    \begin{rightcolumn}
-      #2
-      \vspace*{5 mm}
-    \end{rightcolumn}
-  \end{paracol}
+ #1
+ -----------------
 }
 
 \newcommand{\twoRows}[2] {
-  #1
-  \noindent\rule[0.5ex]{\linewidth}{1pt}
-  #2
-  \vspace*{5 mm}
+  \twoColls{#1}{#2}
 }
 
-\newcommand{\gc}{~$^{\circ}C$}
+\newcommand{\gc}{~gradCels}
 
 \begin{document}
-
-\pagestyle{empty}
-%\maketitle
-\tableofcontents
-\clearpage
 
 \pagestyle{plain}
 \pagenumbering{arabic}
@@ -60,50 +35,36 @@ footskip=.5cm]{geometry}
 \clearpage
 \setcounter{chapter}{1}
 \setcounter{section}{0}
-\chapter*{\centering 09.01}
-\addcontentsline{toc}{chapter}{09.01}
 \input{09_01.tex}
 
 \clearpage
 \setcounter{chapter}{2}
 \setcounter{section}{0}
-\chapter*{\centering 09.02}
-\addcontentsline{toc}{chapter}{09.02}
 \input{09_02.tex}
 
 \clearpage
 \setcounter{chapter}{3}
 \setcounter{section}{0}
-\chapter*{\centering 09.03}
-\addcontentsline{toc}{chapter}{09.03}
 \input{09_03.tex}
 
 \clearpage
 \setcounter{chapter}{4}
 \setcounter{section}{0}
-\chapter*{\centering 09.04}
-\addcontentsline{toc}{chapter}{09.04}
 \input{09_04.tex}
 
 \clearpage
 \setcounter{chapter}{5}
 \setcounter{section}{0}
-\chapter*{\centering 09.05}
-\addcontentsline{toc}{chapter}{09.05}
 \input{09_05.tex}
 
 \clearpage
 \setcounter{chapter}{6}
 \setcounter{section}{0}
-\chapter*{\centering 09.06}
-\addcontentsline{toc}{chapter}{09.06}
 \input{09_06.tex}
 
 \clearpage
 \setcounter{chapter}{7}
 \setcounter{section}{0}
-\chapter*{\centering 09.07}
-\addcontentsline{toc}{chapter}{09.07}
 \input{09_07.tex}
 
 \end{document}
